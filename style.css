@@ -1,0 +1,30 @@
+/* Animaciones personalizadas */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease;
+}
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+/* Fondo animado y elegante en tonos de gris */
+body {
+  background: #f7fafc;
+  color: #222;
+}
+/* Efectos hover para tarjetas de proyectos */
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+.project-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border-color: #90cdf4;
+}

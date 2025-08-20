@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Uli</title>
+  <!-- Tailwind CDN para desarrollo y publicación estática -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Evita FOUC y aplica el modo oscuro desde el inicio
+    if (localStorage.getItem('darkMode') === 'true' ||
+      (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-white to-pink-100 text-gray-900 transition-colors duration-500">
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center py-4">
+      <h1 class="text-3xl font-bold flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+        Uli
+      </h1>
+      <ul class="hidden md:flex gap-6 text-lg font-bold">
+        <li><a href="#inicio" class="flex items-center px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition">Inicio</a></li>
+        <li><a href="#sobre-mi" class="flex items-center px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition">Sobre mí</a></li>
+        <li><a href="#proyectos" class="flex items-center px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition">Proyectos</a></li>
+        <li><a href="#habilidades" class="flex items-center px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition">Habilidades</a></li>
+        <li><a href="#contacto" class="flex items-center px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition">Contacto</a></li>
+      </ul>
+      <!-- Menú hamburguesa para móviles -->
+  <button id="menuToggle" class="md:hidden p-2 rounded bg-white text-gray-800 border border-gray-200 shadow focus:outline-none focus:ring-2 focus:ring-blue-200 animate-bounce" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+  <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-white bg-opacity-95 flex flex-col items-center justify-center gap-8 z-50 hidden">
+        <button id="closeMenu" class="absolute top-4 right-4 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Cerrar menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <ul class="flex flex-col gap-6 text-2xl font-bold">
+          <li><a href="#inicio" class="flex items-center px-6 py-3 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition" onclick="closeMobileMenu()">Inicio</a></li>
+          <li><a href="#sobre-mi" class="flex items-center px-6 py-3 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition" onclick="closeMobileMenu()">Sobre mí</a></li>
+          <li><a href="#proyectos" class="flex items-center px-6 py-3 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition" onclick="closeMobileMenu()">Proyectos</a></li>
+          <li><a href="#habilidades" class="flex items-center px-6 py-3 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition" onclick="closeMobileMenu()">Habilidades</a></li>
+          <li><a href="#contacto" class="flex items-center px-6 py-3 rounded bg-white text-gray-800 border border-gray-200 shadow hover:bg-blue-50 hover:border-blue-200 transition" onclick="closeMobileMenu()">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container mx-auto px-4">
+  <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-100 via-white to-pink-100">
+  <h2 class="text-5xl font-extrabold mb-2 animate-fade-in text-gray-800">¡Hola! Soy Uli</h2>
+  <p class="text-2xl mb-8 animate-fade-in text-gray-700">
+    Del marketing al código:<br>
+    La historia de cómo un publicista<br>
+    decidió que era mejor crear las apps que depender de ellas.
+  </p>
+      <a href="#proyectos" class="px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition">Ver proyectos</a>
+    </section>
+    <section id="sobre-mi" class="py-16">
+      <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+      <p class="text-lg">
+        Soy Uli, programador full stack y especialista en marketing digital que vive en esa intersección mágica entre creatividad y tecnología. He trabajado tanto en grandes empresas como en startups, y he aprendido que la mejor innovación surge cuando conectas mundos aparentemente diferentes.<br><br>
+        Mi stack incluye JavaScript, React, Next.js, Node.js, Python, PHP y APIs de IA (OpenAI, Gemini). Actualmente terminando Ingeniería Informática porque decidí que quería entender qué pasa "detrás del telón" - sí, sufro con los algoritmos, pero cada concepto nuevo me emociona.<br><br>
+        Interesado y con experiencia en formación y educación, soy runner empedernido, ex-triatleta que ahora escucha más a su cuerpo, y de esos que prefieren crear apps a solo probarlas.<br><br>
+        Busco proyectos donde pueda combinar técnica, estrategia y enseñanza. Disponible para remoto.
+      </p>
+    </section>
+    <section id="proyectos" class="py-16">
+      <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
+      <div id="projects-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+    <section id="habilidades" class="py-16">
+      <h2 class="text-3xl font-bold mb-4">Habilidades</h2>
+      <ul class="flex flex-wrap gap-4 justify-center">
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">JavaScript</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">React</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Next.js</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Node.js</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Python</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">PHP</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">SQL</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">HTML5</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">CSS3</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">WordPress</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">PrestaShop</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Marketing</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">SEO</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">SEM</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Comunicación</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Estrategia</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Creatividad</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">IA</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">OpenAI</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Gemini</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Formación</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Analytics</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Contenidos</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">RRSS</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">E-commerce</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Diseño</li>
+        <li class="px-4 py-2 rounded bg-white text-gray-800 border border-gray-200 font-bold shadow hover:bg-blue-50 hover:border-blue-200 transition">Innovación</li>
+      </ul>
+    </section>
+    <section id="contacto" class="py-16">
+      <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+      <!-- Formulario integrado con Formspree -->
+  <form action="https://formspree.io/f/mvgqjvqz" method="POST" class="max-w-md mx-auto flex flex-col gap-4" aria-label="Formulario de contacto" id="contactForm">
+        <input type="text" name="nombre" placeholder="Nombre" required class="px-4 py-2 rounded border" />
+        <input type="email" name="email" placeholder="Email" required class="px-4 py-2 rounded border" />
+        <textarea name="mensaje" placeholder="Mensaje" required class="px-4 py-2 rounded border"></textarea>
+  <button type="submit" class="px-6 py-3 bg-blue-50 text-blue-700 border border-blue-200 rounded shadow hover:bg-blue-100 hover:border-blue-400 transition-all duration-300">Enviar 🚀</button>
+        <p id="formMsg" class="hidden mt-4 text-green-600">¡Mensaje enviado! Gracias por contactar 😊</p>
+      </form>
+      <script>
+        // Mostrar mensaje de confirmación sin recargar la página
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = e.target;
+          var data = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(response) {
+            if (response.ok) {
+              document.getElementById('formMsg').classList.remove('hidden');
+              form.reset();
+            } else {
+              document.getElementById('formMsg').textContent = 'Hubo un error. Intenta de nuevo.';
+              document.getElementById('formMsg').classList.remove('hidden');
+            }
+          });
+        });
+      </script>
+    </section>
+  </main>
+  <footer class="text-center py-8 bg-white border-t border-gray-200">
+    <p class="text-gray-500 font-extrabold text-xl">&copy; 2025 Uli. Portfolio creativo y profesional.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // Menú hamburguesa responsive
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    menuToggle.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    // Cerrar menú al hacer click en enlaces
+    window.closeMobileMenu = closeMobileMenu;
+  </script>
+</body>
+</html>

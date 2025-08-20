@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Portfolio Creativo",
+    "description": "Un portfolio profesional, visualmente atractivo y fácil de actualizar.",
+    "technologies": ["HTML5", "CSS3", "Tailwind", "JavaScript"],
+    "link": "https://github.com/uli/portfolio-creativo"
+  },
+  {
+    "title": "App de Tareas",
+    "description": "Aplicación para gestionar tareas con interfaz moderna y responsive.",
+    "technologies": ["React", "CSS3", "Vite"],
+    "link": "https://github.com/uli/app-tareas"
+  }
+]
