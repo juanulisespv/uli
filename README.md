@@ -31,9 +31,12 @@
 3. ¡Listo! Tu portfolio estará accesible en internet.
 
 ## 💡 Personalización
-- Cambia colores, tipografías o animaciones en `style.css`.
-- Modifica textos y secciones en `index.html`.
-- Añade más funcionalidades en `script.js`.
+ Cambia colores, tipografías o animaciones en `style.css`.
+ Modifica textos y secciones en `index.html`.
+ Añade más funcionalidades en `script.js`.
+
+## 📬 Contacto
+Deja tu nombre, tu correo y me pondré en contacto lo antes posible.
 
 ## ♿ Accesibilidad
 - Navegación por teclado.
